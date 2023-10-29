@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Point to note before starting this project locally
-### make sure to start the json-server with this command on the terminal - cmd to watch db.json data - npx json-server -p 3500 -w data/db.json
+### make sure to start the json-server with this command on the terminal - npx json-server -p 3500 -w data/db.json
 ### check the resources if they are served properly
 
 ## Now you can start the project with command - npm run dev
