@@ -12,6 +12,7 @@ const Post = ({post}) => {
         <Link to={`/post/${id}`} className="link-item color-grey"  element={<PostPage />}>
         <p>{`${summary}  ...read more`}</p>
         </Link>
+        <hr></hr>
         
         
 
