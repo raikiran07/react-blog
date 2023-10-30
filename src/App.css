@@ -186,6 +186,11 @@ form > div{
   
 }
 
+#search{
+  background-color:#fff;
+  border:none;
+}
+
 .h-200{
   min-height:300px;
 }

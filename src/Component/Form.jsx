@@ -10,6 +10,8 @@ const Form = ({searchText,setSearchText}) => {
         value={searchText}
         autoFocus
         onChange={(e)=>setSearchText(e.target.value)}
+        className="color-grey"
+       
         />
     </form>
   )

@@ -101,9 +101,12 @@ function App() {
           // console.log(data)
           localStorage.setItem('posts',JSON.stringify(data))
           setPosts(data)
-          setLoading(false)
+          
         } catch (error) {
           console.log(error)
+        }
+        finally{
+          setLoading(false)
         }
       }
 
