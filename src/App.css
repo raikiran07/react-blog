@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+
+
+
 nav,.list-container{
   display:flex;
   align-items:center;
@@ -8,6 +11,7 @@ nav,.list-container{
 }
 nav{
   padding:10px;
+  
  
 
 }
@@ -15,6 +19,21 @@ nav{
 .list-container{
   list-style-type: none;
   gap:10px;
+  flex:1;
+}
+
+.search-box{
+  flex:2;
+  /* border:1px solid white; */
+}
+
+#search{
+  background-color:#fff;
+  border:none;
+  border-radius:5px;
+  min-height:30px;
+  width:100%;
+  
 }
 
 .link-item{
@@ -47,6 +66,7 @@ container
   background:#fff;
   font-family: 'Lato', sans-serif;
   position:relative;
+  box-shadow:3px 5px 20px rgb(165, 162, 162);
 
   
   
@@ -193,11 +213,7 @@ form > div{
   
 }
 
-#search{
-  background-color:#fff;
-  border:none;
-  border-radius:5px;
-}
+
 
 /* .post-container > hr:last-child{
   display:none;
@@ -226,7 +242,7 @@ form > div{
 
 @media screen and (max-width:500px){
 .container{
-  max-width:80%;
+  max-width:100%;
 }
 nav{
   display:block;
@@ -258,4 +274,13 @@ nav .list-container{
 
 
 
+}
+
+@media screen and (max-width:678px){
+  .search-box{
+    flex:1;
+  }
+  .list-container{
+    gap:2px;
+  }
 }

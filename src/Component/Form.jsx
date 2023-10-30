@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = ({searchText,setSearchText}) => {
   return (
-    <form onSubmit={(e)=>e.preventDefault()}>
+    <form className="search-box" onSubmit={(e)=>e.preventDefault()}>
         <label style={{display:"none"}} htmlFor='search'>search</label>
         <input id="search"
         type="text"
