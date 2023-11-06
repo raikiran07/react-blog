@@ -2,7 +2,7 @@ import React from 'react'
 import Post from './Post'
 
 
-const Home = ({posts,loading}) => {
+const Home = ({posts,loading,ToastContainer}) => {
   // console.log(posts)
   return (
     <div className="content-container">
@@ -14,6 +14,7 @@ const Home = ({posts,loading}) => {
         ) : <p>Loading...</p>
       }
         
+        <ToastContainer />
         
     </div>
   )

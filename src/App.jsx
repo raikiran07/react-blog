@@ -14,6 +14,9 @@ import Edit from './Component/EditPost'
 import {Route,Routes,useNavigate} from 'react-router-dom'
 import dateFormat, { masks } from "dateformat";
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -68,10 +71,18 @@ function App() {
     // setPosts(updatedPosts)
     setAndSave(updatedPosts)
     const res = await axios.post(API_URL,newPost)
-    setTitle('')
-    setSummary('')
-    setBody('')
-    navigate('/')
+    console.log(res.status)
+    if(res.status===201){
+      toast.success("successfully posted");
+      setTitle('')
+      setSummary('')
+      setBody('')
+      navigate('/')
+    }
+    else{
+      console.log('something went wrong...')
+    }
+   
 
 
   }
@@ -118,11 +129,17 @@ function App() {
     try {
 
       const updatedPosts = posts.filter(post=>post.id!=id)
+
+      
       
       const res = await axios.delete(`${API_URL}/${id}`)
-      setAndSave(updatedPosts)
-      // console.log(res)
-      navigate('/')
+      if(res.status===200){
+        toast.success("Successfully deleted")
+        setAndSave(updatedPosts)
+        // console.log(res)
+        navigate('/')
+      }
+     
       
     } catch (error) {
       console.log(error.message)
@@ -150,6 +167,7 @@ function App() {
       <Routes>
         <Route  path='/' element={<Home posts={searchResults}
          loading={loading}
+         ToastContainer={ToastContainer}
         />}/>
         <Route exact path='/post' element={<NewPost
         
@@ -160,6 +178,7 @@ function App() {
         body={body}
         setBody={setBody}
         addPost={addPost}
+        
          />} />
          <Route exact path='/post/edit/:id' element={<Edit
          posts = {posts}
@@ -167,6 +186,7 @@ function App() {
          setPosts={setPosts}
          setAndSave={setAndSave}
          API_URL={API_URL}
+         
          />}/>
         <Route exact path='/post/:id' element={<PostPage 
          posts = {posts}

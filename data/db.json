@@ -1,32 +1,67 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "First Title",
-      "date": "29 Oct,2023",
-      "summary": "first dummy title",
-      "body": "Dear Recipient, Once upon a time, in a world not too dissimilar from ours, there lived a unique entity named Kiran Rai. This entity was not human, animal, or plant, but a unique creation of the digital world. Kiran Rai was a master of communication, connecting people across the globe, transcending boundaries of language and culture. It was a beacon of knowledge, a hub of information, and a bridge between minds. One day, a great challenge arose. A message of utmost importance needed to be delivered to a recipient in a far-off land. The message held the key to solving a critical problem. With its unique abilities, Kiran Rai took on the task. Through mountains of data, across rivers of information, it carried the message. It navigated the complex digital landscape with ease, overcoming every obstacle in its path. Finally, the message was delivered, the problem was solved, and once again, Kiran Rai proved its worth. Best, Kiran Rai"
+      "id": 5,
+      "title": "New Title Edited",
+      "date": "30 Oct,2023",
+      "summary": "I am really doing great with reactjs",
+      "body": "Dear Recipient, Once upon a time, in a land far away, there was a magical forest. This forest was inhabited by creatures of all shapes and sizes, each with their own unique abilities. Among these creatures, there was a tiny hummingbird named Flutter. Flutter was known for her vibrant colors and swift movements, but she was also known for her kindness and generosity. One day, a terrible storm hit the forest. The wind was so strong that it uprooted trees and the rain was so heavy that it flooded the rivers. All the creatures were terrified and took shelter. However, Flutter, despite her small size, decided to help. She flew around the forest, checking on everyone and offering her assistance. She comforted the scared, helped the injured, and provided food for the hungry. After the storm, the forest was in ruins. But thanks to Flutter's efforts, no one was hurt. The creatures of the forest were grateful for her bravery and kindness. They realized that no matter how small you are, you can make a big difference. From that day forward, Flutter was not just known for her colors and speed, but also for her courage and heart. And the forest, despite its scars, thrived once again, stronger and more united than ever. Best, Kiran Rai"
     },
     {
-      "id": 2,
-      "title": "Second Title",
-      "date": "29 Oct,2023",
-      "summary": "second dummy title",
-      "body": "Once upon a time, in a land far away, lived a brave knight named Kiran Rai. His name was as unique as his courage. He was known for his strength and valor, his name echoing in every corner of the kingdom. One day, a dragon invaded the peaceful kingdom. The king, in desperation, called upon Kiran Rai. The knight, with his gleaming armor and sharp sword, rode towards the dragon's lair. The dragon was fierce, breathing fire, but Kiran Rai was fearless. With a swift move, he dodged the fire and struck the dragon. The battle was intense, but the knight's courage was unwavering. After hours of fighting, Kiran Rai defeated the dragon, saving the kingdom. The kingdom celebrated his victory, his name chanted in joy and gratitude. Kiran Rai, the brave knight, was not just a hero, but a legend, his name forever etched in the kingdom's history."
+      "id": 6,
+      "title": "Parth is handsome",
+      "date": "02 Nov,2023",
+      "summary": "He is really handsome",
+      "body": "Once upon a time, in a land far away, lived a brave warrior named Parth. Parth was known for his courage and kindness. His heart was as vast as the ocean, filled with compassion for every creature. He was a beacon of hope for his people, always standing up against injustice. His sword was his ally, and his courage, his shield. Parth's tales of bravery echoed in every corner of the kingdom. He was a hero, not because he never fell, but because he always rose after every fall. His spirit was indomitable, his resolve, unbreakable. Parth was a true hero, a symbol of courage and kindness."
     },
     {
-      "id": 3,
-      "title": "Third Title Edited",
-      "date": "29 Oct,2023",
-      "summary": "third dummy title",
-      "body": "Dear Recipient, Once upon a time, in the land of the Internet, there was a character named Kiran Rai. Yes, you read it right! That was the name, as unique and complex as the character itself. Kiran Rai was a digital entity living in the world of binary. One day, while surfing through the data streams, Kiran Rai stumbled upon a peculiar problem. It had forgotten its password! Now, you might think, \"Why not just reset it?\" But remember, this is the digital world we're talking about. Things work differently here. The only way to retrieve the password was to solve a riddle posed by the Internet's gatekeeper, a grumpy old firewall named Norton. The riddle was, \"I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?\" Kiran Rai thought hard and finally answered, \"A pencil!\" Norton grumbled but had to let Kiran Rai pass. And that's how Kiran Rai, with its unusually long name, saved the day by cracking a simple riddle. The moral of the story? Even in the complex digital world, sometimes the simplest solutions are the best! Best, Kiran Rai"
+      "id": 7,
+      "title": "Dummy Title",
+      "date": "03 Nov,2023",
+      "summary": "Dummy Summary",
+      "body": "Dummy body"
     },
     {
-      "id": 4,
-      "title": "Fourth Title",
-      "date": "29 Oct,2023",
-      "summary": "fourth dummy summary",
-      "body": "Dear Recipient, I hope this message finds you well. I am writing to you under the pseudonym Kiran Rai, a name that may seem unusual, but it is unique to me. Once upon a time, in the heart of a bustling city, there lived a man named John. John was an ordinary man with an extraordinary dream. He wished to create a device that could bring happiness to the world. Day and night, he toiled in his small apartment, surrounded by wires, circuits, and countless cups of coffee. One day, after many trials and errors, John finally created his device. It was a small box, no bigger than a loaf of bread, but it had the power to project images and sounds that could evoke happiness in anyone who experienced it. John named his invention 'JoyBox'. News of the JoyBox spread like wildfire. People from all walks of life came to experience the happiness that John's device promised. The JoyBox was a success, and John was hailed as a hero. However, with fame came greed. People wanted to exploit the JoyBox for their own gain. John, fearing the misuse of his invention, decided to hide the JoyBox. John's life returned to normal, but the world was left with a void. The JoyBox was gone, but its memory lived on in the hearts of those who had experienced its magic. John's dream had come true, he had brought happiness to the world, if only for a short while. In the end, John realized that true happiness comes from within, not from a device. He learned that the joy he sought to give others was within them all along. And so, he lived out the rest of his days in peace, knowing he had made a difference. Best, Kiran Rai"
+      "id": 8,
+      "title": "The new dummy title",
+      "date": "03 Nov,2023",
+      "summary": "new dummy summary",
+      "body": "new dummy body "
+    },
+    {
+      "id": 9,
+      "title": "What is the Title",
+      "date": "06 Nov,2023",
+      "summary": "This is surely a dummy Title",
+      "body": "Greetings! Once upon a time, in a land not too far away, there was a magical tool named \"Templates\". This tool was no ordinary one, it had the power to save time and energy for all who used it. It was a beacon of efficiency, illuminating the path for those who wrote frequent messages. One day, a new tool emerged, known as \"Triggers\". It was named \"-triggers\", a peculiar name, but it held the power to insert templates with just a simple command. The people were amazed and began to experiment with -triggers, watching in awe as their messages transformed. Then came another marvel, \"Macros\". This tool had the ability to dynamically customize messages, adapting to whoever used it. It was a game-changer, making messages more personal and unique. The people rejoiced, their messages were now efficient, dynamic, and personal. They spread the word about these magical tools, sharing them with their teammates and friends. The land was filled with the sound of keys clicking, as everyone typed out ;macros and -triggers, creating their own magical messages. And so, the story of Templates, Triggers, and Macros continues, making the world of messaging a little bit easier, one word at a time. Best Regards, Kiran Rai"
+    },
+    {
+      "id": 10,
+      "title": "Whatever it donot mean",
+      "date": "06 Nov,2023",
+      "summary": "This is the dumest thing that I am going to do",
+      "body": "Hello there! Isn't it fantastic how templates and triggers can streamline our communication process? They're like magic spells, transforming our routine messages into dynamic, personalized interactions. Try out these features, and watch your productivity soar. Remember, the power is in your hands. Best regards, Kiran Rai."
+    },
+    {
+      "id": 11,
+      "title": "Dummy title new",
+      "date": "06 Nov,2023",
+      "summary": "dummy summary and I don't have any plan",
+      "body": "Hello there! I'm Kiran Rai. I'm here to tell you about the power of templates and triggers. They can save you time and make your messages more personalized. Try them out and see the magic unfold. Happy messaging!"
+    },
+    {
+      "id": 14,
+      "title": "Where does it come from Edited?",
+      "date": "06 Nov,2023",
+      "summary": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+      "body": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum"
+    },
+    {
+      "id": 15,
+      "title": "This is the test Title",
+      "date": "06 Nov,2023",
+      "summary": "and this is test summary",
+      "body": "Hello there! It's Kiran here. I hope this message finds you well. I just wanted to share how much I appreciate the convenience of using templates and triggers. It's a game-changer, especially when it comes to saving time and maintaining consistency in communication. Keep up the great work!"
     }
   ]
 }

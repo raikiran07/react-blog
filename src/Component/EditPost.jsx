@@ -3,6 +3,8 @@ import {useParams} from 'react-router-dom'
 import {useState,useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EditPost = ({posts,API_URL,setAndSave}) => {
 
@@ -30,11 +32,20 @@ const updatePost = async(e,id) => {
     }
 
     const res = await axios.put(`${API_URL}/${id}`,newData)
-
+    
+    if(res.status===200){
+    
+    toast.success("Successfully edited")
     const response = await axios.get(API_URL)
 
     setAndSave(response.data)
     navigate('/')
+    }
+    else{
+      console.log("something went wrong...")
+    }
+
+    
    
 }
 

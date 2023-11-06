@@ -1,4 +1,6 @@
 import React from 'react'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const NewPost = ({title,setTitle,summary,setSummary,body,setBody,addPost}) => {
@@ -46,9 +48,9 @@ const NewPost = ({title,setTitle,summary,setSummary,body,setBody,addPost}) => {
         <button type="submit" className="submit-btn">
           submit
         </button>
-
+        
       </form>
-
+     
     </div>
   )
 }
