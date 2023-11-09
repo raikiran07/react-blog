@@ -13,5 +13,7 @@ Currently, two official plugins are available:
 
 ## Now you can start the project with command - npm run dev
 
+## replaced the json-server with firebase datastore to make it handy and available to all
+
 
 

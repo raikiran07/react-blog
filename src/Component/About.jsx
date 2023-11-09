@@ -21,6 +21,9 @@ const About = () => {
         <span className="color-grey">
         Promise based HTTP client for the browser and node.js
         </span>
+
+        <h2>Firebase datastore</h2>
+        <span>firebase is a backend service provider, which is easy and simple to use, it provdies various services such as authentication, database , etc</span>
     </div>
   )
 }

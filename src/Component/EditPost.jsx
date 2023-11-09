@@ -5,8 +5,9 @@ import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateDoc, getDocs, doc } from 'firebase/firestore'
 
-const EditPost = ({posts,API_URL,setAndSave}) => {
+const EditPost = ({posts,setPosts,collectionRef,db}) => {
 
   // console.log(posts)
 
@@ -24,27 +25,27 @@ const [editBody,setEditBody] = useState(body)
 const updatePost = async(e,id) => {
     e.preventDefault()
     const newData = {
-        id,
         title:editTitle,
         date,
         summary:editSummary,
         body:editBody
     }
 
-    const res = await axios.put(`${API_URL}/${id}`,newData)
+    // const res = await axios.put(`${API_URL}/${id}`,newData)
+    const currentPost = doc(db,"posts",id)
+
+    await updateDoc(currentPost,{...newData})
     
-    if(res.status===200){
+    const data = await getDocs(collectionRef)
+        
+    setPosts(data.docs.map(doc=>({...doc.data(),id:doc.id})))
+   
     
     toast.success("Successfully edited")
-    const response = await axios.get(API_URL)
+    // const response = await axios.get(API_URL)
 
-    setAndSave(response.data)
     navigate('/')
-    }
-    else{
-      console.log("something went wrong...")
-    }
-
+   
     
    
 }

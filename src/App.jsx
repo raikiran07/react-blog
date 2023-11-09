@@ -16,6 +16,10 @@ import dateFormat, { masks } from "dateformat";
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {db} from './firebase'
+import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore'
+
+
 
 
 
@@ -24,12 +28,14 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
+
+  console.log(import.meta.env.VITE_API_KEY)
   const now = new Date()
   const time = dateFormat(now,"dd mmm,yyyy")
   
   const navigate = useNavigate()
 
-  const API_URL = 'http://localhost:3500/posts'
+
   
 
 
@@ -44,48 +50,46 @@ function App() {
   const [searchResults,setSearchResults] = useState([])
   const [loading,setLoading] = useState(true)
 
-  
+  //setting firebase database
+  const [dummyUsers,setDummyUsers] = useState([])
+
+  const collectionRef = collection(db,"posts")
 
   
+
 
   //set and save functionality
   const setAndSave = (updatedPosts) => {
     setPosts(updatedPosts)
-    localStorage.setItem('posts',JSON.stringify(updatedPosts))
+    // localStorage.setItem('posts',JSON.stringify(updatedPosts))
 }
 
 
   const addPost = async(e) => {
     e.preventDefault()
     const date = dateFormat(now,"dd mmm,yyyy")
-    const id = posts.length ? posts[posts.length-1].id + 1 : 1
+   
     const newPost = {
-        id,
+        
         title,
         date,
         summary,
         body
     }
 
+    await addDoc(collectionRef,{...newPost})
+
     const updatedPosts = [...posts,newPost]
-    // setPosts(updatedPosts)
+   
     setAndSave(updatedPosts)
-    const res = await axios.post(API_URL,newPost)
-    console.log(res.status)
-    if(res.status===201){
+
+    
       toast.success("successfully posted");
       setTitle('')
       setSummary('')
       setBody('')
       navigate('/')
     }
-    else{
-      console.log('something went wrong...')
-    }
-   
-
-
-  }
 
   
 
@@ -97,21 +101,17 @@ function App() {
       // console.log(filteredResults)
       setSearchResults(filteredResults.reverse());
 
-      
-
-      
-
-
   }, [posts, searchText])
 
+
+
   useEffect(()=>{
-      const fetchData = async (url) => {
+      const fetchData = async () => {
         try {
-          const res = await axios.get(url)
-          const data = await res.data
-          // console.log(data)
-          localStorage.setItem('posts',JSON.stringify(data))
-          setPosts(data)
+          const data = await getDocs(collectionRef)
+        
+          setPosts(data.docs.map(doc=>({...doc.data(),id:doc.id})))
+          
           
         } catch (error) {
           console.log(error)
@@ -121,7 +121,9 @@ function App() {
         }
       }
 
-      fetchData(API_URL)
+      //firebase database
+     fetchData()
+
   },[])
 
   const handleDelete = async(id) => {
@@ -129,16 +131,16 @@ function App() {
     try {
 
       const updatedPosts = posts.filter(post=>post.id!=id)
-
+      const currentDoc = doc(db,"posts",id)
+      await deleteDoc(currentDoc)
       
       
-      const res = await axios.delete(`${API_URL}/${id}`)
-      if(res.status===200){
+     
         toast.success("Successfully deleted")
         setAndSave(updatedPosts)
         // console.log(res)
         navigate('/')
-      }
+      
      
       
     } catch (error) {
@@ -185,7 +187,8 @@ function App() {
          editPost = {editPost}
          setPosts={setPosts}
          setAndSave={setAndSave}
-         API_URL={API_URL}
+         collectionRef={collectionRef}
+        db={db}
          
          />}/>
         <Route exact path='/post/:id' element={<PostPage 
